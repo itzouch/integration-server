@@ -1,0 +1,30 @@
+[
+  {
+    "preview": "预习、预览、回顾",
+    "vote": "投票",
+    "prefix": "前缀",
+    "statistics": "统计",
+    "poster": "海报，广告",
+    "economics": "经济",
+    "ranking list": "排行榜",
+    "properties": "特性，道具，内容",
+    "meta": "标签，元标签",
+    "meta-data": "元数据",
+    "calculate": "计算、打算、预测"
+  },
+  {
+    "详情":   "particulars/detail",
+    "lobster": "龙虾",
+    "hot pot": "火锅",
+    "express delivery": "快递",
+    "express": "表达",
+    "redundant": "多余的，过剩的"
+  },
+  {
+    "decimal": "十进制",
+    "visible": "可见的",
+    "capital": "资本/首都",
+    "statements": "报表",
+    "auditing": "审计"
+  }
+]
