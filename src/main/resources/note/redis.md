@@ -1,3 +1,5 @@
+question: 为什么数组查询复杂度为O（1）
+    a:数组内存地址是连续的,根据索引查询时，无须比较，因为物理地址的单位长度是相同的。
 # 数据结构
 1. sds
     简单动态字符串
@@ -21,6 +23,7 @@
     
     
 # 对象编码
+# 记忆方法 string和set不包括ZipList set利用dic去重 hash用hashtable list用LinkedList有序 zSet利用跳表增加查找速度，利用dict去重
 1. zset 
     特点：k-v-score 有序、去重。支持按score排序，支持范围查找。
     - 跳表+dict    
@@ -37,7 +40,7 @@
     - ZipList（元素数量<512且每个元素长度小于64byte）
     - Hashtable
 4. list 
-    特点：k-v 有序 消息队列、有序场景等。
+    特点：k-v 有序 消息队列、栈、有序场景。
     编码类型：
     - ZipList（元素数量<512且每个元素长度小于64byte）
     - LinkedList
