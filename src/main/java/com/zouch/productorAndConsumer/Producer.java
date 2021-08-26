@@ -54,30 +54,14 @@ public class Producer {
     }
 
     public static void main(String[] args) throws InterruptedException {
-//        Producer keyGenerateUtil = new Producer();
-//        keyGenerateUtil.test();
-//
-//        int [] a = new int[2];
+        Producer keyGenerateUtil = new Producer();
+        keyGenerateUtil.test();
 
-        System.out.println(reverse(1534236469));
+        int [] a = new int[2];
+
 
     }
-    public static int reverse(int x) {
-        StringBuilder str = new StringBuilder();
-        if(x<0){
-            x = -x;
-            str.append("-");
-        }
-        String b = String.valueOf(x);
-        char[] array = b.toCharArray();
 
-        for (int i = array.length-1; i >=0 ; i--) {
-            str.append(array[i]);
-        }
-        String s = String.valueOf(str);
-        System.out.println(s);
-        return Integer.parseInt(s);
-    }
 
 
 }
