@@ -15,22 +15,22 @@ public class QuickSort {
             return;
         }
         int index = array[left];
-        int l =left;
+        int l = left;
         int r = right;
-        while (l<r){
-            while (l<r&&index<=array[r]){
+        while (l < r) {
+            while (l < r && index <= array[r]) {
                 r--;
             }
             array[l] = array[r];
 
-            while (l<r&& index>=array[l]){
+            while (l < r && index >= array[l]) {
                 l++;
             }
             array[r] = array[l];
         }
         array[l] = index;
-        sort(array, left, l-1);
-        sort(array, l+1, right);
+        sort(array, left, l - 1);
+        sort(array, l + 1, right);
     }
 
 

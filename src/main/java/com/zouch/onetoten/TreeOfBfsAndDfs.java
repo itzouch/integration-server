@@ -6,6 +6,7 @@ import lombok.Setter;
 import org.springframework.util.CollectionUtils;
 
 import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @author ZouQi
@@ -28,8 +29,8 @@ public class TreeOfBfsAndDfs {
     private TreeNode rootNode;
 
     @Data
-    public static class TreeNode {
-        private Object key;
+    public static class TreeNode<T> {
+        private T key;
 
         private TreeNode parent;
 

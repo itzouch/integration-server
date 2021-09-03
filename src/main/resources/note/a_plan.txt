@@ -1,0 +1,20 @@
+1. java
+collection、juc、thread、synchronized、volatile
+
+2. redis数据类型
+
+3、redis集群备份和同步
+
+4、mysql复习
+
+5、mysql日志系统
+
+6、JVM内存区域
+
+7、JVM垃圾回收
+
+8、Spring
+
+9、Kafka
+
+10、单例、工厂、策略、观察者、代理、装饰、责任链...
