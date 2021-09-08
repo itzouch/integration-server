@@ -1,4 +1,4 @@
-package com.zouch.onetoten;
+package com.zouch.onetoten.Tree;
 
 import lombok.Data;
 import lombok.Getter;
@@ -6,7 +6,6 @@ import lombok.Setter;
 import org.springframework.util.CollectionUtils;
 
 import java.util.*;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @author ZouQi
