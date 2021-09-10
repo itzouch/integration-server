@@ -1,8 +1,7 @@
-package com.zouch.onetoten;
+package com.zouch.algorithm;
 
 import lombok.Data;
 
-import javax.swing.text.TabableView;
 import java.util.*;
 
 /**

@@ -1,4 +1,4 @@
-package com.zouch.onetoten;
+package com.zouch.algorithm;
 
 import java.util.ArrayList;
 import java.util.List;

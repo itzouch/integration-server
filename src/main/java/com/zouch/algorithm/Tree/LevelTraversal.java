@@ -1,4 +1,4 @@
-package com.zouch.onetoten.Tree;
+package com.zouch.algorithm.Tree;
 
 import java.util.ArrayList;
 import java.util.Deque;
@@ -10,26 +10,8 @@ import java.util.List;
  * @date 2021/9/8 21:23
  * @description 层次遍历
  */
-public class LevelTraversal {
+public class LevelTraversal extends AbstractTreeNode{
 
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
 
     public List<List<Integer>> levelOrder(TreeNode root) {
         if (root == null) {

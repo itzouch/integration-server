@@ -1,4 +1,4 @@
-package com.zouch.onetoten.Tree;
+package com.zouch.algorithm.Tree;
 
 import lombok.Data;
 import lombok.Getter;

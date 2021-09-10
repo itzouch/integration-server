@@ -1,6 +1,4 @@
-package com.zouch.onetoten;
-
-import org.springframework.util.CollectionUtils;
+package com.zouch.algorithm;
 
 import java.util.*;
 import java.util.stream.Collectors;
