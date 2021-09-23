@@ -1,10 +1,13 @@
 1.基本数据类型
 boolean  1位
-char   2kb 16位
 byte   1kb 8位
+
+char   2kb 16位
 short  2kb 16位
+
 int   4kb 32位
 float 4kb 32位
+
 double 8kb 64位
 long   8kb 64位
 
@@ -18,6 +21,11 @@ long   8kb 64位
     1.抽象类不能被实例化，子类必须实现抽象方法
     2.接口中的方法默认都是public abstract
     3.抽象类可以有普通成员变量，接口中不可以  默认都是public static final
+
+
+4.hashcode的作用
+    hashcode的作用其实就是为了查找，散列表定位key的索引时会用，比如hashmap找key的索引时，会用对象的容量n减1 与对象的哈希code做与运算的到索引值。
+    hashmap的容量都是2的n次方 n-1的低位全部为1 和求余运算得到的结果相同，但是与运算要比求余运算的效率高很多，因为计算机底层数据本身就是二进制存储的。
 
 
 
