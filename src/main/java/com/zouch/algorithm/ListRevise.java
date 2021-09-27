@@ -49,9 +49,13 @@ public class ListRevise {
         ListNode pre = null;
         ListNode cur = head;
         while (cur!=null){
+            // 保存当前结点的next结点
             ListNode next = cur.next;
+            // 当前节点的next指向pre
             cur.next = pre;
+            // pre指向当前结点
             pre = cur;
+            // 当前节点等于next
             cur = next;
         }
         return pre;

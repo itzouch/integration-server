@@ -1,11 +1,14 @@
-package com.zouch.controller;
+package com.zouch.kafka;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.concurrent.ExecutionException;
 
 /**
  * @author ZouQi
@@ -13,12 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping(value = "/kafka/test")
-public class KafkaTest {
+public class KafkaProducerTest {
     @Autowired
     private KafkaTemplate kafkaTemplate;
 
     @GetMapping("/{message}")
-    public void sendMessage1(@PathVariable("message") String normalMessage) {
+    public void sendMessage1(@PathVariable("message") String normalMessage) throws ExecutionException, InterruptedException {
         kafkaTemplate.send("zouqi", normalMessage);
     }
 
