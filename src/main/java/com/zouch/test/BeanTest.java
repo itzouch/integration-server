@@ -3,9 +3,11 @@ package com.zouch.test;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
+import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.Lifecycle;
+import org.springframework.context.SmartLifecycle;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -17,7 +19,7 @@ import javax.annotation.PreDestroy;
  */
 @Slf4j
 @Component
-public class BeanTest implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean, Lifecycle {
+public class BeanTest implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, BeanPostProcessor, DisposableBean, SmartLifecycle {
     @Override
     public void setBeanName(String s) {
         log.info("BeanNameAware.setBeanName调用");
@@ -68,6 +70,22 @@ public class BeanTest implements BeanNameAware, BeanFactoryAware, ApplicationCon
     @Override
     public boolean isRunning() {
         log.info("Lifecycle.running");
-        return false;
+        return true;
+    }
+
+    @Override
+    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+        log.info("postProcessBeforeInitialization");
+        return null;
+    }
+
+    @Override
+    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+        log.info("postProcessAfterInitialization");
+        return null;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Math.random()*100);
     }
 }
