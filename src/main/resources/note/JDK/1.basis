@@ -1,12 +1,12 @@
 1.基本数据类型
 boolean  1位
-byte   1kb 8位
+byte   1B 8位
 
-char   2kb 16位
-short  2kb 16位
+char   2B 16位
+short  2B 16位
 
-int   4kb 32位
-float 4kb 32位
+int   4B 32位
+float 4B 32位
 
 double 8kb 64位
 long   8kb 64位
