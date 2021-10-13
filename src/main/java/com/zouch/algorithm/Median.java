@@ -1,6 +1,9 @@
 package com.zouch.algorithm;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -36,6 +39,7 @@ public class Median {
     public static void main(String[] args) {
         int[] a = new int[]{1, 3};
         int[] b = new int[]{ 2};
+
         List<Integer> collect = Stream.concat(Arrays.stream(a).boxed(), Arrays.stream(b).boxed()).collect(Collectors.toList());
         System.out.println(collect.toString());
 

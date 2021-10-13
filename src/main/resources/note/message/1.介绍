@@ -1,0 +1,13 @@
+消息队列对比：https://blog.csdn.net/mawenshu316143866/article/details/89915223
+
+Kafka：
+broker集群，每个broker中包含多个partation
+一个topic拥有多个partion，partion中有leader和follower，只有leader接受独写。follower均为副本备份。
+如果指定消费者组，则组内只有一个consumer可以消费到消息。
+不同的消费者组，可以消费同一个topic，各自可以消费一条消息。
+如果有多个partion，那么消息消费是无序的，如果需要指定消费的顺序，可以设定topic只有一个parion分区。
+partion分区中保存了消息的offset，offset记录了消息在当前分区的编号，一次递增。id越小说明消息约旧，越大越新。
+如果组内的一个consumer挂了，那么它负责的分区将会由其它组内的consumer代替。
+当分区数小于组内的consumer数目时，一定会有消费者消费不到消息。
+
+
