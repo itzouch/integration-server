@@ -38,10 +38,7 @@ public class TestFilter extends OncePerRequestFilter {
 
         Map<String, String[]> parameterMap = httpServletRequest.getParameterMap();
         if (Objects.nonNull(parameterMap)){
-            parameterMap.forEach((k,v)->{
-                LOGGER.info("request: param{},value{}",k,v);
-
-            });
+            parameterMap.forEach((k,v)-> LOGGER.info("request: param{},value{}",k,v));
         }
         filterChain.doFilter(httpServletRequest,httpServletResponse);
     }
