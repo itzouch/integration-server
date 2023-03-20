@@ -1,0 +1,6 @@
+Auto Close Tag
+Auto Import Tag
+Auto Rename Tag
+Bracket Pair Colorizer
+HTML CSS Support
+Path Intellisense

@@ -1,6 +1,5 @@
 package com.zouch.controller;
 
-import com.zouch.filter.TestInterceptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
