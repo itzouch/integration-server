@@ -15,6 +15,7 @@
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
+        <docker.image.prefix>myProject</docker.image.prefix>
     </properties>
     <dependencies>
         <dependency>
@@ -86,6 +87,27 @@
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.4.3</version>
+                <configuration>
+<!--                    imageName表示Docker镜像名称，我们使用Docker的命名规范，命名为：springio/docker-->
+                    <imageName>${docker.image.prefix}/${project.artifactId}:${project.version}</imageName>
+<!--                    dockerDirectory表示Dockerfile的路径-->
+                    <baseImage>docker.io/cemmersb/centos-jdk8:latest</baseImage>
+                    <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
+                    <dockerDirectory>src/main/docker</dockerDirectory>
+<!--                    resource表示在构建时需要的资源文件，这些文件和Dockerfile放在一起，这里只需要Spring Boot生成的jar文件即可。-->
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
@@ -93,6 +115,7 @@
                     <target>8</target>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 
